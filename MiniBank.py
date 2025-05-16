@@ -1,5 +1,5 @@
 accounts = {}
-account_number_counter = {}
+account_number_counter = 1000
 users = {"admin": "password123"}  
 
 def create_account():
@@ -11,7 +11,7 @@ def create_account():
         'balance': 0,
         'transactions': []
     }
-    print(f"Account successfully created!\nAccount Number: {account_number}")
+    print(f"Account successfully created!\nAccount Number: {1000}")
     account_number_counter += 1
 
 def deposit():
@@ -180,52 +180,3 @@ Admin()
 
 
 
-
-# import os
-
-
-# def customer_info():
-#     name = input("Enter name: ")
-#     address = input("Enter address: ")
-#     username = input("Enter username: ")
-#     userpassword = input("Enter user password: ")
-    
-#     return name, address, username, userpassword  
-
-
-# def create_next_customer_id():
-#     if not os.path.exists("customers.txt"):  
-#         return "c001"
-#     else:
-#         with open("customers.txt", 'r') as file:
-#             lines = file.readlines() 
-#             if not lines:  
-#                 return "c001"
-#             last_line = lines[-1].split("\t")[0] 
-#             last_id = int(last_line[1:])  
-#             return f'c{last_id + 1}' 
-
-
-# def create_customer():
-#     customer = customer_info() 
-#     customer_id = create_next_customer_id()  
-    
-#     with open("customers.txt", 'a') as customers_file, open("users.txt", 'a') as users_file:
-#         customers_file.write(f'{customer_id}\t{customer[0]}\t{customer[1]}\n')  
-#         users_file.write(f'{customer[2]}\t{customer[3]}\n')  
-        
-#     print(f"Customer {customer_id} added successfully!")
-
-
-# create_customer()
-
-
-
-
-   
-
-
-# save_transaction()
-
-
-                    
